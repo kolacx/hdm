@@ -1,5 +1,5 @@
 "use strict";
-define(["jquery"], function($) {
+// define(["jquery"], function($) {
    
     
     
@@ -13,6 +13,10 @@ $(function () {
         var ref = btn.closest('form').find('[required]');
         var msg = btn.closest('form').find('input, textarea, select');
         var send_btn = btn.closest('form').find('[name=send]');
+
+        var ch = btn.closest('form').find('[name=otr]').val();
+
+        console.log(ch);
 
          $(ref).each(function() {
             if ($(this).val() == '') {
@@ -31,7 +35,7 @@ $(function () {
                         $(":input.error:first").focus();
                     }
                 }
-                var patterntel = /^()[0-9]{9,18}/i;
+                var patterntel = /^[+]?(?:\(\d+(?:\.\d+)?\)|\d+(?:\.\d+)?)(?:[ -]?(?:\(\d+(?:\.\d+)?\)|\d+(?:\.\d+)?))*(?:[ ]?(?:x|ext)\.?[ ]?\d{1,5})?$/;
                 if ( $(this).attr("type") == 'tel') {
                     if(!patterntel.test($(this).val())) {
 //                        $("[name=phone]").val('');
@@ -50,6 +54,17 @@ $(function () {
                         $(":input.error:first").focus();
                     }
                 }
+
+                 var patterntext = /^([a-z])[a-z]/i;
+                if ($(this).attr("type") == 'selec') {
+                    if($(this).val() == null) {
+                        console.log('not Pass');
+                        var errorfield = $(this);
+                        $(this).addClass('error').parent('.field').append('<span class="allert">Choose your Experience</span>');
+                        error = 1;
+                        $(":input.error:first").focus();
+                    }
+                }
                 
         
 
@@ -62,16 +77,21 @@ $(function () {
                 $(this).attr('disabled', true);
             });
             $(function () {
+                console.log('1111');
                 var form = $(this).closest('form'),
 					name = form.find('.name').val();
                 if ($(this).val() == '') {
-                    
-                                        $('#trueModal').click(function() {
-                              $.fancybox.open({
-                                    'type': 'inline',
-                                    'src': '#trueModal'
-                                });
-                            });
+                    console.log('okk');
+                    // $('#trueModalId').click();
+                            // $.fancybox.open({
+                            //     src  : '#trueModal',
+                            //     type : 'inline',
+                            //     opts : {
+                            //         afterShow : function( instance, current ) {
+                            //             console.info( 'done!' );
+                            //         }
+                            //     }
+                            // });
                     
                     
                 }
@@ -90,5 +110,5 @@ $(function () {
     
     
 
-});
+// });
 

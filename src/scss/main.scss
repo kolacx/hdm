@@ -42,6 +42,16 @@ $SB:'IBMPlexSans-Bold';
 
 /* button  style */
 
+/* .shadow{
+    width: 100%;
+    height: 100vh;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAQAAABOkSfeAAAAuElEQVQoFQXBwZEbQQwEMHSPXleu1eYfq4Y0kAX5eD1ej8fj6+v1z+P1+vP1FnAUa4yIGMT6qdgCrhVEsUYEFXWcAioigmvEWOuHNW4BsBbEsSg+KlYK4ApqFetYB/ETKSCOFePgOq5xjRFjC2AN4iIWFBEfW8AgxmKsVXGNYKSAAKLWERRFkAKIwaBWXByMQQqAItYKYhFE3AKgGKviqosxYimgBqsixjGOiCNQwLVWjBoxqkYNyH98XlURyoFVtwAAAABJRU5ErkJggg==) repeat-y top 20px right;
+    z-index: 11;
+    pointer-events: none;
+    position: absolute;
+} */
+
+
 .read__button {
     display: flex;
     justify-content: center;
@@ -49,7 +59,7 @@ $SB:'IBMPlexSans-Bold';
     background-color: #B3001D;
     width: 100%;
     max-width: 200px;
-    height: auto;
+    height: 50px;
     min-height: 50px;
     color: #ffffff;
     font: 16px $SB;
@@ -71,7 +81,7 @@ $SB:'IBMPlexSans-Bold';
     background-color: #FFC700;
     width: 100%;
     max-width: 225px;
-    height: auto;
+    height: 50px;
     min-height: 50px;
     color: #000;
     font: 16px $SB;
@@ -95,7 +105,7 @@ $SB:'IBMPlexSans-Bold';
     background-color: #FFC700;
     width: 100%;
     max-width: 250px;
-    height: auto;
+    height: 50px;
     min-height: 50px;
     color: #000;
     font: 16px $SB;
@@ -227,7 +237,7 @@ p {
     
     @media only screen and (max-width:925px){
         
-            &:before{
+ /*           &:before{
                 content: '';
                 display: block;
                 width: 1px;
@@ -237,7 +247,7 @@ p {
                 height: 100%;
                 box-shadow: 0 0 15px #000;
                 
-            }
+            }*/
         
 
     }
@@ -292,7 +302,7 @@ p {
             border-right:  1px solid #c0c0c0;
             height: 53px;
             padding: 5px 10px;
-                width: 11%;
+                width: 16.5%;
             display: flex;
             justify-content: center;
               align-items:center;
@@ -1299,11 +1309,24 @@ header {
                          
                 }
                 
+/*            @media only screen and (max-width:925px){
 
+                .shadow{
+                    width: 100%;
+                    height: auto;
+                    min-height: calc(100% - 50px);
+                    position: absolute;
+                    z-index: 111;
+                    pointer-events: none;
+                    margin-top: 50px;
+                    -webkit-box-shadow: inset -15px 0 15px -10px silver;
+                    box-shadow: inset -15px 0 15px -10px silver;
+                }
+                } */
             
             li {
                 
-                       
+
                 
                 width: 100%;
                 
@@ -1643,14 +1666,14 @@ header {
                 line-height: 21px;
                 text-transform: uppercase;
                 color: #FFC700;
-                margin-bottom: 23px;
+                // margin-bottom: 23px;
                 margin-top: 10px;
             }
             p {
                 font: 15px $S;
                 line-height: 21px;
                 color: #000000;
-                    margin-bottom: 20px;
+                    margin-bottom: 50px;
             }
         }
     }
@@ -1853,6 +1876,23 @@ header {
     
     
 }
+
+.policy{
+    ul{
+        margin-left: 30px;
+    }
+
+        ul li:before {
+        content:  "—";
+        position: relative;
+        left:     -5px;
+    }
+    h4 {
+        font: 25px IBMPlexSans;
+            font-weight: 900;
+    }
+}
+
 footer {
     background: #121313 url(../img/foooter.png) no-repeat top center;
     background-size: cover;
@@ -1873,6 +1913,11 @@ footer {
                     display: block;
                     margin-top: 10px;
                 }
+    }
+
+    a.under{
+        font: 16.08px $S;
+        text-decoration: underline;
     }
     
     a {
@@ -1937,6 +1982,7 @@ footer {
         line-height: 1.35em;
         margin-bottom: 20px;
         text-align: left;
+        width: 98%;
     }
     .logo {
         display: block;
@@ -2023,6 +2069,8 @@ footer {
 /* @media element 992 style  --> */
 
 @media only screen and (max-width: 992px) and (min-width: 601px) {
+
+
     
         .section__4 form{
         margin-top: 60px !important;
@@ -2035,12 +2083,12 @@ footer {
     
     .section__12 ul li:last-child{
         width: 100%;
-        border-bottom: 1px solid transparent !important;
+        // border-bottom: 1px solid transparent !important;
     }
     
     .section__12 ul li{
         width: 100%;
-            border-bottom: 1px solid #ccc0c0;
+            // border-bottom: 1px solid #ccc0c0;
 //        margin-bottom: 20px;
             min-height: auto !important;
         padding: 20px 0!important;
@@ -2072,6 +2120,7 @@ footer {
     width: 100%;
   
     display: block;
+    position: relative;
 }
     
 .edriver__information.open {
@@ -2215,7 +2264,6 @@ text-align: center;
     .margin__bottom__element,
     .last,
     header .menu,
-    header .sabtitle,
     .section__1 h2,
     .section__1 ul.list,
     .section__1 ul li,
@@ -2229,11 +2277,24 @@ text-align: center;
     ul.list {
         padding-bottom: 50px !important;
     }
+
+    header .sabtitle{
+        margin-bottom: 30px!important;
+        font: 20px IBMPlexSans-Bold;
+    }
+
+    header h1{
+        font: 30px IBMPlexSans-Bold!important;
+    }
 }
 
 /* @media element 600 style  -->  */
 
 @media only screen and (max-width: 600px) {
+
+    .section__3{
+        background: #fff;
+    }
     
        .section__4 form{
         margin-top: 50px !important;
@@ -2289,7 +2350,7 @@ text-align: center;
     
     .section__12 ul li{
         width: 100%;
-        border-bottom: 1px solid #ccc0c0;
+        // border-bottom: 1px solid #ccc0c0;
 //        margin-bottom: 20px;
         min-height: auto !important;
         padding: 20px 0!important;
@@ -2322,6 +2383,7 @@ text-align: center;
     width: 100%;
     
     display: block;
+    position: relative;
 }
     
 .edriver__information.open {
@@ -2451,6 +2513,7 @@ text-align: center;
     
     .section__6 .list{
             max-width: 100%;
+            margin-bottom: 38px;
     }
         .section__5 .slick__arrow,.section__7 .name, .section__7 .rowk,.section__7 .slick__arrow,.section__11 .slick__arrow,.section__11 .box__img{
         text-align: center;
@@ -2481,6 +2544,7 @@ text-align: center;
     .section__2 .box__content{
         img{
             width: 75px;
+            height: 64px;
         }
         
         p{
@@ -2488,12 +2552,16 @@ text-align: center;
         }
     }
     
+    header{
+        height: 100vh;
+    }
     
     header,
     footer,
     [class*='section__'],
     .designe__form{
           padding: 50px 0;
+          
     }
     h1 {
         font: 35px $SB !important;

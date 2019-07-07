@@ -28,18 +28,47 @@ $(window).scroll(function() {
    $(this).find('.select__input').addClass("open"); 
  
     
-     $('.slick5__arrow__next').click(function() {
-    $slider__block__5.slick('slickNext');
-  });
- 
-       $('.slick5__arrow__prev').click(function() {
-    $slider__block__5.slick('slickPrev');
-  });  
+
     
- var $slider__block__5 = $('.slider__block__5');
+
 
 
 $( document ).ready(function() {
+   var $slider__block__5 = $('.slider__block__5');
+
+   $slider__block__5.on('init', function(event, slick){
+     slideCount = slick.slideCount;
+     setSlideCount();
+     setCurrentSlideNumber(slick.currentSlide);
+   });
+
+   $slider__block__5.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+     setCurrentSlideNumber(nextSlide);
+   });
+
+   function setSlideCount() {
+     var $el = $('.bignamber').find('.total');
+     var $el2 = $('.s1').find('.total');
+     $el.text(slideCount);
+     $el2.text(slideCount);
+   }
+
+   function setCurrentSlideNumber(currentSlide) {
+     var $el = $('.bignamber').find('.current');
+     var $el2 = $('.s1').find('.current');
+     $el.text(currentSlide + 1);
+     $el2.text(currentSlide + 1);
+   } 
+       
+          $('.slick5__arrow__next').click(function() {
+         $slider__block__5.slick('slickNext');
+       });
+       
+            $('.slick5__arrow__prev').click(function() {
+         $slider__block__5.slick('slickPrev');
+       });  
+
+
     $slider__block__5.slick({
             prevArrow: '.slick5__arrow__prev',
             nextArrow: '.slick5__arrow__next',
@@ -58,29 +87,11 @@ $( document ).ready(function() {
       fade: true,
       cssEase: 'linear'
     });
+
+   
 });
 
-$slider__block__5.on('init', function(event, slick){
-  slideCount = slick.slideCount;
-  setSlideCount();
-  setCurrentSlideNumber(slick.currentSlide);
-});
 
-$slider__block__5.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  setCurrentSlideNumber(nextSlide);
-});
-
-function setSlideCount() {
-  var $el = $('.slide-count-wrap').find('.total');
-  $el.text(slideCount);
-}
-
-function setCurrentSlideNumber(currentSlide) {
-  var $el = $('.slide-count-wrap').find('.current');
-  $el.text(currentSlide + 1);
-} 
-    
-    
  
     
     
@@ -88,19 +99,55 @@ function setCurrentSlideNumber(currentSlide) {
 
     
     
-  $('.slick7__arrow__next').click(function() { 
-    $slider__block__7.slick('slickNext');
-  });
- 
-  $('.slick7__arrow__prev').click(function() {
-    $slider__block__7.slick('slickPrev');
-  });
+
     
     
- var $slider__block__7 = $('.slider__block__7');
+
 
 
 $( document ).ready(function() {
+
+  var $slider__block__7 = $('.slider__block__7');
+
+  $slider__block__7.on('init', function(event, slick){
+    console.log('init');
+    slideCount = slick.slideCount;
+    setSlideCount();
+    setCurrentSlideNumber(slick.currentSlide);
+  });
+
+  $slider__block__7.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    setCurrentSlideNumber(nextSlide);
+  });
+
+  function setSlideCount() {
+    var $el = $('.s2').find('.total');
+    var $el2 = $('.s22').find('.total');
+    $el.text(slideCount);
+    $el2.text(slideCount);
+    
+  }
+
+  function setCurrentSlideNumber(currentSlide) {
+    var $el = $('.s2').find('.current');
+    var $el2 = $('.s22').find('.current');
+    $el.text(currentSlide + 1);
+    $el2.text(currentSlide + 1);
+  } 
+
+  $('.slick7__arrow__next').click(function() { 
+    $slider__block__7.slick('slickNext');
+  });
+  
+  $('.slick7__arrow__prev').click(function() {
+    $slider__block__7.slick('slickPrev');
+  });
+
+         
+
+   
+
+
     $slider__block__7.slick({
         prevArrow: '.slick7__arrow__prev',
             nextArrow: '.slick7__arrow__next',
@@ -120,50 +167,67 @@ $( document ).ready(function() {
           fade: true,
           cssEase: 'linear'
     });
-});
 
-$slider__block__7.on('init', function(event, slick){
-  slideCount = slick.slideCount;
-  setSlideCount();
-  setCurrentSlideNumber(slick.currentSlide);
-});
-
-$slider__block__7.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  setCurrentSlideNumber(nextSlide);
-});
-
-function setSlideCount() {
-  var $el = $('.slide-count-wrap').find('.total');
-  $el.text(slideCount);
-}
-
-function setCurrentSlideNumber(currentSlide) {
-  var $el = $('.slide-count-wrap').find('.current');
-  $el.text(currentSlide + 1);
-} 
-        
 
     
-    
 
-    
-    
-    
-    
-    
-  $('.slick11__arrow__next').click(function() {
-    $slider__block__11.slick('slickNext');
-  });
  
-  $('.slick11__arrow__prev').click(function() {
-    $slider__block__11.slick('slickPrev');
-  });
-   
+
+        
+});
+
+
     
- var $slider__block__11 = $('.slider__block__11');
+
+    
+    
+    
+    
+    
+
+    
+
 
 
 $( document ).ready(function() {
+   var $slider__block__11 = $('.slider__block__11');
+
+
+   $slider__block__11.on('init', function(event, slick){
+     slideCount = slick.slideCount;
+     setSlideCount();
+     setCurrentSlideNumber(slick.currentSlide);
+   });
+
+   $slider__block__11.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+     setCurrentSlideNumber(nextSlide);
+   });
+
+   function setSlideCount() {
+     var $el = $('.s3').find('.total');
+     var $el2 = $('.s33').find('.total');
+     $el.text(slideCount);
+     $el2.text(slideCount);
+     
+   }
+
+   function setCurrentSlideNumber(currentSlide) {
+     var $el = $('.s3').find('.current');
+     var $el2 = $('.s33').find('.current');
+     $el.text(currentSlide + 1);
+     $el2.text(currentSlide + 1);
+   }    
+
+
+   $('.slick11__arrow__next').click(function() {
+     $slider__block__11.slick('slickNext');
+   });
+   
+   $('.slick11__arrow__prev').click(function() {
+     $slider__block__11.slick('slickPrev');
+   });
+
+
     $slider__block__11.slick({
         
         prevArrow: '.slick11__arrow__prev',
@@ -182,29 +246,16 @@ $( document ).ready(function() {
         fade: true,
         cssEase: 'linear'
     });
+
+ 
+        
+        
+
+
+     
 });
 
-$slider__block__11.on('init', function(event, slick){
-  slideCount = slick.slideCount;
-  setSlideCount();
-  setCurrentSlideNumber(slick.currentSlide);
-});
 
-$slider__block__11.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  setCurrentSlideNumber(nextSlide);
-});
-
-function setSlideCount() {
-  var $el = $('.slide-count-wrap').find('.total');
-  $el.text(slideCount);
-}
-
-function setCurrentSlideNumber(currentSlide) {
-  var $el = $('.slide-count-wrap').find('.current');
-  $el.text(currentSlide + 1);
-}     
-    
-    
     
     
     
@@ -290,122 +341,66 @@ function setCurrentSlideNumber(currentSlide) {
     }); 
     
     
-    
-    
-    
-    
-    google.charts.load('current', {'packages':['geochart']});
-      google.charts.setOnLoadCallback(drawRegionsMap1);
-//      google.charts.setOnLoadCallback(drawRegionsMap2);
+$(document).ready(function(){
 
-      
-      //First Map
-      function drawRegionsMap1() {
+      google.charts.load('current', {'packages':['geochart']});
+        google.charts.setOnLoadCallback(drawRegionsMap1);
+  //      google.charts.setOnLoadCallback(drawRegionsMap2);
 
-        var data = google.visualization.arrayToDataTable([
-    ['State', ''],
         
-       ['Michigan', 107],
- ['Missouri', 94.8],
+        //First Map
+        function drawRegionsMap1() {
 
+          var data = google.visualization.arrayToDataTable([
+          ['State', ''],
+          ['Michigan', 107],
+          ['Missouri', 94.8],
+          ['Illinois', 67.9],
+          ['Indiana', 109.1],
+          ['Ohio', 100.1],
+          ['Pennsylvania', 88.2],
+          ['Arkansas', 115.8],
+          ['Kentucky', 128.4],
+          ['Tennessee', 142.8],
+          ['Mississippi', 120.3],
+          ['Alabama', 142.9],
+              
+          ]);
 
-   ['Illinois', 67.9],
-   
-    ['Indiana', 109.1],
-  ['Ohio', 100.1],
-   
-      ['Pennsylvania', 88.2],
-   
-      ['Arkansas', 115.8],
-   
-      ['Kentucky', 128.4],
-   
- ['Tennessee', 142.8],
-   
-      ['Mississippi', 120.3],
-   
- ['Alabama', 142.9],
+          var options = {
+              region: 'US',
+              displayMode: 'region',
+              resolution: 'provinces',
+              width: '100%',
+              height: '100%', 
+
             
-        ]);
+  //            datalessRegionColor:'#FFC700',
+               backgroundColor: '#a2a8a8',
+              colorAxis: {colors: [ '#FFC700' ,'#FFC700']}
+          };
 
-        var options = {
-      
-         
-            region: 'US',
-            displayMode: 'region',
-            resolution: 'provinces',
-            width: '100%',
-      height: '100%', 
-
+          var chart = new google.visualization.GeoChart(document.getElementById('map2'));
           
-//            datalessRegionColor:'#FFC700',
-             backgroundColor: '#a2a8a8',
-            colorAxis: {colors: [ '#FFC700' ,'#FFC700']}
+          chart.draw(data, options);
+        }   
+      
+        setTimeout(function() { drawRegionsMap1(); }, 2000);
+        
+
+        window.onresize = function(event) {
+                drawRegionsMap1();
         };
 
-        var chart = new google.visualization.GeoChart(document.getElementById('map2'));
-        
-        chart.draw(data, options);
-      }   
+
+});
     
     
-$( window ).resize(function() {
+
+   
     
-        google.charts.load('current', {'packages':['geochart']});
-      google.charts.setOnLoadCallback(drawRegionsMap1);
-//      google.charts.setOnLoadCallback(drawRegionsMap2);
+    
 
-      
-      //First Map
-      function drawRegionsMap1() {
-
-        var data = google.visualization.arrayToDataTable([
-    ['State', ''],
-        
-       ['Michigan', 107],
- ['Missouri', 94.8],
-
-
-   ['Illinois', 67.9],
-   
-    ['Indiana', 109.1],
-  ['Ohio', 100.1],
-   
-      ['Pennsylvania', 88.2],
-   
-      ['Arkansas', 115.8],
-   
-      ['Kentucky', 128.4],
-   
- ['Tennessee', 142.8],
-   
-      ['Mississippi', 120.3],
-   
- ['Alabama', 142.9],
-            
-        ]);
-
-        var options = {
-      
-         
-            region: 'US',
-            displayMode: 'region',
-            resolution: 'provinces',
-            width: '100%',
-      height: '100%', 
-
-          
-//            datalessRegionColor:'#FFC700',
-             backgroundColor: '#a2a8a8',
-            colorAxis: {colors: [ '#FFC700' ,'#FFC700']}
-        };
-
-        var chart = new google.visualization.GeoChart(document.getElementById('map2'));
-        
-        chart.draw(data, options);
-      }
-
- });  
 
     
     
@@ -482,8 +477,8 @@ $( window ).resize(function() {
          $(".mapcode1").removeClass('open');
          $(".mapcode1").addClass('open');
         
-                   $(".section__10 .sidebar ul li:nth-child(2) .edriver__information").removeClass('open');
-  $(".section__10 .sidebar ul li:nth-child(3) .edriver__information").removeClass('open');
+          $(".section__10 .sidebar ul li:nth-child(2) .edriver__information").removeClass('open');
+    $(".section__10 .sidebar ul li:nth-child(3) .edriver__information").removeClass('open');
         
      });    
     
@@ -531,6 +526,8 @@ $( window ).resize(function() {
 });
 
 
+
+
 //
 //$("#open-policy").on('click', function() {
 //  
@@ -554,9 +551,9 @@ $( window ).resize(function() {
 
 $(document).ready(function(){
       $('[type="tel"]').inputmask("+1(999)999-99-99");
-  $('[name="zipcode"]').inputmask('99999'); 
-    $('[name="ferstname"]').inputmask();
-    $('[name="lastname"]').inputmask();
+    $('[name="zipcode"]').inputmask('99999'); 
+    $('[name="ferstname"]').inputmask({ "placeholder": "" });
+    $('[name="lastname"]').inputmask({ "placeholder": "" });
 });
 
 
