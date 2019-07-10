@@ -2315,8 +2315,19 @@ text-align: center;
         display: block;
     }
 
-    .map-map{
-        display: none;
+    iframe{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .map-img{
+        display: block;
+    }
+
+    iframe{
+        display: none !important;
     }
 
     .section__10 .sidebar ul li a{

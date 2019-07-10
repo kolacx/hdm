@@ -369,17 +369,17 @@ $(this).find('.select').toggleClass("back no-back");
 
 // Акардион с драйверами
 
-var iOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
-var event = "click";
+// var iOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
+// var event = "click";
 
-if(iOS != null)
-    event = "touchstart";
+// if(iOS != null)
+//     event = "touchstart";
 
 
 // Переключение драйверов / открытие карты / закрытие карты
 
 $(function() {
-  $(".section__10 .sidebar ul li:nth-child(1)").on(event, function() {
+  $(".section__10 .sidebar ul li:nth-child(1)").on('click', function() {
     
             $('.section__10 .sidebar ul li:nth-child(2) a').removeClass('back');
             $('.section__10 .sidebar ul li:nth-child(2) a').addClass('no-back');
@@ -396,7 +396,7 @@ $(function() {
            
          });    
 
-  $(".section__10 .sidebar ul li:nth-child(2)").on(event, function() {
+  $(".section__10 .sidebar ul li:nth-child(2)").on('click', function() {
      
             $('.section__10 .sidebar ul li:nth-child(1) a').removeClass('back');
             $('.section__10 .sidebar ul li:nth-child(1) a').addClass('no-back');
@@ -412,7 +412,7 @@ $(function() {
             
           });   
 
-  $(".section__10 .sidebar ul li:nth-child(3)").on(event, function() {
+  $(".section__10 .sidebar ul li:nth-child(3)").on('click', function() {
       
                 $('.section__10 .sidebar ul li:nth-child(1) a').removeClass('back');
                 $('.section__10 .sidebar ul li:nth-child(1) a').addClass('no-back');
