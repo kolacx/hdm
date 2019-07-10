@@ -98,11 +98,11 @@
         <div class="container backraund">
             <div class=row>
                 <div class="col m12 s12 l12 xl12">
-                    <h2>You can earn $90,000 per year on <br>the legendary Peterbilt trucks</h2>
+                    <h2>You can earn $90 000 per year on <br>the legendary Peterbilt trucks</h2>
                 </div>
                 <div class="col m12 s12 l6 xl6">
                     <p>HMD LLC — a team where each Driver is valued. You’re more than just a number on a truck for us. At HMD LLC we hear and appreciate the Drivers’ opinions.</p>
-                    <p class=last>Our Drivers have the highest fleet rates in flatbed trucking. You can earn 80 cents per mile (paid weekly), get 10 000 miles of road per month on average and enjoy most weekends off home with your family. This means that your wages can reach $90,000 per year or even higher!</p>
+                    <p class=last>Our Drivers have the highest fleet rates in flatbed trucking. You can earn 80 cents per mile (paid weekly), get 10 000 miles of road per month on average and enjoy most weekends off home with your family. This means that your wages can reach $90 000 per year or even higher!</p>
                 </div>
                 <div class="col m12 s12 l6 xl6">
                     <ul>
@@ -235,10 +235,10 @@
                         <input class=mail type=email name=email required value placeholder=Email /> </span>
                         </div>
                         <div class=form_input> <span class=field> 
-                        <label class="tag">Phone</label><input type=tel name=phone required value placeholder=Phone /> </span>
+                        <label class="tag">Phone</label><input type=tel name=phone pattern="\d*" inputmode="numeric" required value placeholder=Phone /> </span>
                         </div>
                         <div class=form_input> <span class=field>
-                        <label class="tag">ZIP code</label><input  class=zipcode type="number"  name=zipcode required value placeholder="ZIP code" /> </span>
+                        <label class="tag">ZIP code</label><input  class=zipcode  pattern="\d*" inputmode="numeric"  name=zipcode required value placeholder="ZIP code" /> </span>
                         </div>
                         <div class=form_input> <span class="field back"> 
                         <input type=checkbox id=coding name=interest value required> <label class="checkbox-on" for=coding>I have CDL Class A</label> </span>
@@ -313,7 +313,7 @@
                             <p>Although HMD LLC is a new player in the American market of trucking logistics, we, in fact, have more than 20 years of experience to show for it. The top management worked as a part of HMD Trucking Group from which we emerged in 2018. Our goal is to combine our experiences with the newest technologies to provide our Drivers with optimal routes, assuring safety and performance.</p>
                         </div>
                         <div>
-                            <p>We do not just ship cargo throughout East America. Every HMD LLC Driver returns home with a smile on a face. We offer some of the best conditions on the market: from high wages [$90,000 per year] to modern trucks and weekends home with your family.</p>
+                            <p>We do not just ship cargo throughout East America. Every HMD LLC Driver returns home with a smile on a face. We offer some of the best conditions on the market: from high wages [$90 000 per year] to modern trucks and weekends home with your family.</p>
                         </div>
                         <div>
                             <p>Find a worthy use for your experience — join the HMD LLC team to become part of the new history of American logistics! The company has already taken care of everything, you just focus on the road.</p>
@@ -526,7 +526,7 @@
         <div class=sidebar>
             <h2 class=last>HMD LLС Route <br>examples</h2>
             <ul>
-                <li data-minactiv=1>
+                <li data-minactiv=1 class="open">
                     <a class="select namberDriver back">Driver #1 <span>click</span></a>
                     <div class="edriver__information open">
                        <span class="shadow"></span>
@@ -1183,8 +1183,6 @@
     
     <script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@3.3.7/dist/inputmask/inputmask.js"></script>
 
-<script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@3.3.7/dist/inputmask/jquery.inputmask.js"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@3.3.7/dist/inputmask/jquery.inputmask.js"></script>
     
     </body> </html>

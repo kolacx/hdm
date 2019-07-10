@@ -16,7 +16,6 @@ $(function () {
 
         var ch = btn.closest('form').find('[name=otr]').val();
 
-        console.log(ch);
 
          $(ref).each(function() {
             if ($(this).val() == '') {
@@ -55,19 +54,14 @@ $(function () {
                     }
                 }
 
-                 var patterntext = /^([a-z])[a-z]/i;
                 if ($(this).attr("type") == 'selec') {
                     if($(this).val() == null) {
-                        console.log('not Pass');
                         var errorfield = $(this);
                         $(this).addClass('error').parent('.field').append('<span class="allert">Choose your Experience</span>');
                         error = 1;
                         $(":input.error:first").focus();
                     }
                 }
-                
-        
-
             }
         })
 
@@ -77,12 +71,10 @@ $(function () {
                 $(this).attr('disabled', true);
             });
             $(function () {
-                console.log('1111');
                 var form = $(this).closest('form'),
 					name = form.find('.name').val();
                 if ($(this).val() == '') {
                     console.log('okk');
-                    // $('#trueModalId').click();
                             // $.fancybox.open({
                             //     src  : '#trueModal',
                             //     type : 'inline',

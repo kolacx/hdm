@@ -6,6 +6,17 @@
 @import "modules/jquery.fancybox.scss";
 
 /*  not necessary */
+/*
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+  height:5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #b2001d;
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}*/
 
 @media only screen and (max-width: 299px) {
     body {
@@ -1673,7 +1684,7 @@ header {
                 font: 15px $S;
                 line-height: 21px;
                 color: #000000;
-                    margin-bottom: 50px;
+                    margin-bottom: auto;
             }
         }
     }
@@ -1718,7 +1729,7 @@ header {
 
     @media only screen and (min-width: 993px) {
      
-          height: 750px;
+          height: 740px;
     }
     .container {
         position: relative;
@@ -2070,7 +2081,9 @@ footer {
 
 @media only screen and (max-width: 992px) and (min-width: 601px) {
 
-
+    .section__10 .sidebar ul li a{
+        margin-right: 25px;
+    }
     
         .section__4 form{
         margin-top: 60px !important;
@@ -2118,6 +2131,7 @@ footer {
     }
     .section__10 .sidebar ul li {
     width: 100%;
+
   
     display: block;
     position: relative;
@@ -2126,6 +2140,7 @@ footer {
 .edriver__information.open {
     width: 992px;
     height: auto;
+    margin-bottom: 25px;
 
     
   -webkit-overflow-scrolling: touch;
@@ -2292,6 +2307,10 @@ text-align: center;
 
 @media only screen and (max-width: 600px) {
 
+    .section__10 .sidebar ul li a{
+        margin-right: 25px;
+    }
+
     .section__3{
         background: #fff;
     }
@@ -2389,6 +2408,7 @@ text-align: center;
 .edriver__information.open {
     width: 992px;
     height: auto;
+    margin-bottom: 25px;
   
    
   -webkit-overflow-scrolling: touch;
