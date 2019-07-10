@@ -30,6 +30,8 @@ $(this).find('.select__input').addClass("open");
 
 
 
+// Первый слайдер блок 5
+
 $( document ).ready(function() {
  var $slider__block__5 = $('.slider__block__5');
 
@@ -88,7 +90,7 @@ $( document ).ready(function() {
  
 });
 
-
+// Первый слайдер блок 7
 
 $( document ).ready(function() {
 
@@ -154,7 +156,7 @@ $( document ).ready(function() {
 });
 
 
-
+// Первый слайдер блок 11
 
 $( document ).ready(function() {
  var $slider__block__11 = $('.slider__block__11');
@@ -254,6 +256,9 @@ cssEase: 'linear'
 }); 
 
 
+
+// Карта в футере
+
 $(document).ready(function(){
 
   google.charts.load('current', {'packages':['geochart']});
@@ -293,7 +298,7 @@ $(document).ready(function(){
   colorAxis: {colors: [ '#FFC700' ,'#FFC700']}
 };
 
-var chart = new google.visualization.GeoChart(document.getElementById('map2'));
+var chart = new google.visualization.GeoChart(document.getElementById('map2')); // GeoChart карта. От Google
 
 chart.draw(data, options);
 }   
@@ -309,6 +314,8 @@ window.onresize = function(event) {
 });
 
 
+
+// Открытие меню
 
 $('.mobile__button').click(function() {
   $('nav.menu ul').toggleClass('open');
@@ -360,80 +367,73 @@ $(this).find('.select').toggleClass("back no-back");
 
 
 
-$(".section__10 .sidebar ul li:nth-child(1)").on('click', function() {
-  
-          $('.section__10 .sidebar ul li:nth-child(2) a').removeClass('back');
-          $('.section__10 .sidebar ul li:nth-child(2) a').addClass('no-back');
-          $('.section__10 .sidebar ul li:nth-child(3) a').removeClass('back');
-          $('.section__10 .sidebar ul li:nth-child(3) a').addClass('no-back');
-          
-          
-          $(".mapcode1").removeClass('open');
-          $(".mapcode1").addClass('open');
+// Акардион с драйверами
+
+var iOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
+var event = "click";
+
+if(iOS != null)
+    event = "touchstart";
 
 
-         $(".section__10 .sidebar ul li:nth-child(2) .edriver__information").removeClass('open');
-         $(".section__10 .sidebar ul li:nth-child(3) .edriver__information").removeClass('open');
-         
-       });    
+// Переключение драйверов / открытие карты / закрытие карты
 
-$(".section__10 .sidebar ul li:nth-child(2)").on('click', function() {
-   
-          $('.section__10 .sidebar ul li:nth-child(1) a').removeClass('back');
-          $('.section__10 .sidebar ul li:nth-child(1) a').addClass('no-back');
-          $('.section__10 .sidebar ul li:nth-child(3) a').removeClass('back');
-          $('.section__10 .sidebar ul li:nth-child(3) a').addClass('no-back');
-          
-          $(".mapcode2").removeClass('open');
-          $(".mapcode2").addClass('open');
-
-
-          $(".section__10 .sidebar ul li:nth-child(1) .edriver__information").removeClass('open');
-          $(".section__10 .sidebar ul li:nth-child(3) .edriver__information").removeClass('open');
-          
-        });   
-
-$(".section__10 .sidebar ul li:nth-child(3)").on('click', function() {
+$(function() {
+  $(".section__10 .sidebar ul li:nth-child(1)").on(event, function() {
     
-              $('.section__10 .sidebar ul li:nth-child(1) a').removeClass('back');
-              $('.section__10 .sidebar ul li:nth-child(1) a').addClass('no-back');
-              $('.section__10 .sidebar ul li:nth-child(2) a').removeClass('back');
-              $('.section__10 .sidebar ul li:nth-child(2) a').addClass('no-back');
-              
-              $(".mapcode3").removeClass('open');
-              $(".mapcode3").addClass('open');
+            $('.section__10 .sidebar ul li:nth-child(2) a').removeClass('back');
+            $('.section__10 .sidebar ul li:nth-child(2) a').addClass('no-back');
+            $('.section__10 .sidebar ul li:nth-child(3) a').removeClass('back');
+            $('.section__10 .sidebar ul li:nth-child(3) a').addClass('no-back');
+            
+            
+            $(".mapcode1").removeClass('open');
+            $(".mapcode1").addClass('open');
 
 
-         $(".section__10 .sidebar ul li:nth-child(1) .edriver__information").removeClass('open');
-         $(".section__10 .sidebar ul li:nth-child(2) .edriver__information").removeClass('open');
-         
-       });   
+           $(".section__10 .sidebar ul li:nth-child(2) .edriver__information").removeClass('open');
+           $(".section__10 .sidebar ul li:nth-child(3) .edriver__information").removeClass('open');
+           
+         });    
+
+  $(".section__10 .sidebar ul li:nth-child(2)").on(event, function() {
+     
+            $('.section__10 .sidebar ul li:nth-child(1) a').removeClass('back');
+            $('.section__10 .sidebar ul li:nth-child(1) a').addClass('no-back');
+            $('.section__10 .sidebar ul li:nth-child(3) a').removeClass('back');
+            $('.section__10 .sidebar ul li:nth-child(3) a').addClass('no-back');
+            
+            $(".mapcode2").removeClass('open');
+            $(".mapcode2").addClass('open');
+
+
+            $(".section__10 .sidebar ul li:nth-child(1) .edriver__information").removeClass('open');
+            $(".section__10 .sidebar ul li:nth-child(3) .edriver__information").removeClass('open');
+            
+          });   
+
+  $(".section__10 .sidebar ul li:nth-child(3)").on(event, function() {
+      
+                $('.section__10 .sidebar ul li:nth-child(1) a').removeClass('back');
+                $('.section__10 .sidebar ul li:nth-child(1) a').addClass('no-back');
+                $('.section__10 .sidebar ul li:nth-child(2) a').removeClass('back');
+                $('.section__10 .sidebar ul li:nth-child(2) a').addClass('no-back');
+                
+                $(".mapcode3").removeClass('open');
+                $(".mapcode3").addClass('open');
+
+
+           $(".section__10 .sidebar ul li:nth-child(1) .edriver__information").removeClass('open');
+           $(".section__10 .sidebar ul li:nth-child(2) .edriver__information").removeClass('open');
+           
+         });   
+});
 
 });
 
 
 
-
-//
-//$("#open-policy").on('click', function() {
-//  
-//  $.fancybox.open({
-//    src : '',
-//    type : 'html',
-//    smallBtn : false
-//  });
-//    
-////    $('.next-form').click(function() {
-////
-////        $.fancybox.open({
-////	   src  : '#trueModal'
-////
-////});
-////});
-//  
-//});
-
-
+// Маска для input
 
 $(document).ready(function(){
   $('[type="tel"]').inputmask("+1 (999) 999-99-99");
@@ -442,6 +442,7 @@ $(document).ready(function(){
   $('[name="lastname"]').inputmask({ "placeholder": "" });
 });
 
+// Переворот стрелки в input
 
 $(document).ready(function(){
   
